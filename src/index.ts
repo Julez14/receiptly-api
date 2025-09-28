@@ -72,7 +72,7 @@ If a value cannot be determined, use null. Do not include extra commentary.`;
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-2.0-flash",
+      model: "gemini-2.5-flash",
       contents: [prompt, imagePart],
       config: {
         responseMimeType: "application/json",
