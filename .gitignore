@@ -1,0 +1,51 @@
+# Node.js dependencies
+/node_modules
+
+# pnpm
+pnpm-lock.yaml
+
+# Logs and runtime data
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.pid
+*.seed
+*.pid.lock
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build output and compiled files
+/build
+/dist
+/out
+/lib-cov
+/coverage
+/.nyc_output
+*.tsbuildinfo
+
+# Editor and IDE directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Optional package manager cache directories
+.npm
+.eslintcache
+.yarn-integrity
+
+# Other
+*.tgz
