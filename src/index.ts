@@ -4,12 +4,25 @@ dotenv.config();
 
 import fastify from "fastify";
 import multipart from "@fastify/multipart";
+import cors from "@fastify/cors";
 import { GoogleGenAI, createPartFromBase64 } from "@google/genai";
 
 const server = fastify({ logger: true });
 
+// Configure CORS - add production URL here when needed
+const allowedOrigins = [
+  "http://localhost:3000",
+  // Add production URL here: "https://your-production-domain.com"
+];
+
 // register multipart support (no top-level await to stay compatible with tsconfig)
 server.register(multipart);
+
+// register CORS support
+server.register(cors, {
+  origin: allowedOrigins,
+  credentials: true,
+});
 
 server.get("/", async (request, reply) => {
   return { hello: "world" };
