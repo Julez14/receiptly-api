@@ -65,6 +65,3 @@ If the model cannot determine a value it will be `null`. If the model returns no
 
 - For quick testing use small images or text receipts; the current implementation inlines the image as base64 when sending to the model. For very large images you may want to implement a file-hosting approach and pass a URI instead.
 - Keep your `GEMINI_API_KEY` secret — do not commit `.env` to source control. A `.env.example` is included for reference.
-- This service is intentionally minimal and meant to be called from frontend code via a server-side proxy or directly from a trusted backend.
-
-If you need example frontend code (fetch + formdata) or CI/test scripts, tell me which stack you're using and I can add a snippet.
