@@ -11,7 +11,7 @@ const server = fastify({ logger: true });
 
 // Configure CORS - add production URL here when needed
 const allowedOrigins = [
-  "http://localhost:3000",
+  "https://receiptly-frontend.vercel.app",
   // Add production URL here: "https://your-production-domain.com"
 ];
 
