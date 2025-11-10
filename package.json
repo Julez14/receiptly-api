@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "pnpm run build && node --test build/test/**/*.test.js",
     "build": "tsc -p tsconfig.json",
     "start": "node build/index.js",
     "dev": "nodemon --watch src src/index.ts"
@@ -17,12 +17,18 @@
     "@fastify/cors": "^11.1.0",
     "@fastify/multipart": "^9.2.1",
     "@google/genai": "^0.2.0",
+    "@supabase/supabase-js": "^2.81.0",
     "dotenv": "^16.6.1",
-    "fastify": "^5.6.1"
+    "fastify": "^5.6.1",
+    "jsonwebtoken": "^9.0.2",
+    "node-fetch": "^2.7.0"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^24.5.2",
+    "jest": "^30.2.0",
     "nodemon": "^3.1.10",
+    "ts-jest": "^29.4.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   }
